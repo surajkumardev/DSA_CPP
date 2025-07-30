@@ -15,12 +15,15 @@ int max_element(int arr[],int n){
 
 int min_element(int arr[],int n){
     int min=arr[0];
+    int index;
     for(int i=1;i<n;i++){
         if(arr[i]<min){
             min=arr[i];
+            index=i;
         }
     }
     return min;
+    return index;
 }
 
 int main(){
