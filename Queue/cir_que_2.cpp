@@ -6,6 +6,7 @@
 
 // This allows enqueuing and dequeuing in O(1) time.
 
+
 #include <iostream>
 using namespace std;
 
@@ -19,6 +20,7 @@ public:
         next = nullptr;
     }
 };
+
 
 class CircularQueue {
 private:
@@ -34,14 +36,13 @@ public:
         Node* newNode = new Node(val);
         if (front == nullptr) {
             front = rear = newNode;
-            rear->next = front; // Circular link
+            rear->next = front; 
         } else {
             rear->next = newNode;
             rear = newNode;
             rear->next = front;
         }
     }
-
     void dequeue() {
         if (front == nullptr) {
             cout << "Queue is Empty\n";
@@ -87,3 +88,25 @@ public:
         return front == nullptr;
     }
 };
+
+// 🔸 Main Function
+int main() {
+    CircularQueue cq;
+
+    cq.enqueue(10);
+    cq.enqueue(20);
+    cq.enqueue(30);
+    cq.display(); 
+    cout << "Front Element: " << cq.peek() << endl; 
+
+    cq.dequeue();
+    cq.display(); 
+
+    cq.dequeue();
+    cq.dequeue();
+    cq.dequeue(); 
+
+    cout << "Is Queue Empty? " << (cq.isEmpty() ? "Yes" : "No") << endl; 
+
+    return 0;
+}

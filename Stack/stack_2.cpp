@@ -3,6 +3,11 @@
 #include <iostream>
 using namespace std;
 
+// Stack Implementation using Linked List
+
+#include <iostream>
+using namespace std;
+
 class Node {
 public:
     int data;
@@ -60,3 +65,25 @@ public:
         cout << endl;
     }
 };
+
+// ✅ Main function to test the stack
+int main() {
+    Stack s;
+
+    s.push(10);
+    s.push(20);
+    s.push(30);
+
+    cout << "Stack elements: ";
+    s.display();
+
+    cout << "Top element: " << s.peek() << endl;
+
+    s.pop();
+    cout << "After popping, stack: ";
+    s.display();
+
+    cout << "Is stack empty? " << (s.isEmpty() ? "Yes" : "No") << endl;
+
+    return 0;
+}

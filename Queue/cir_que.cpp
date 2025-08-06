@@ -8,6 +8,7 @@
 
 
 
+
 #include <iostream>
 using namespace std;
 
@@ -56,8 +57,7 @@ public:
         }
 
         if (front == rear) {
-            // Only one element
-            front = rear = -1;
+            front = rear = -1; // Only one element
         } else {
             front = (front + 1) % size;
         }
@@ -87,7 +87,30 @@ public:
         cout << endl;
     }
 
-    ~CircularQueue() {
+    ~CircularQueue() { //de_constructor
         delete[] arr;
     }
 };
+
+int main() {
+    CircularQueue q(5);
+
+    q.enqueue(10);
+    q.enqueue(20);
+    q.enqueue(30);
+    q.enqueue(40);
+    q.display();
+
+    q.dequeue();
+    q.dequeue();
+    q.display();
+
+    q.enqueue(50);
+    q.enqueue(60);
+    q.display();
+
+    cout << "Front element: " << q.peek() << endl;
+
+    q.enqueue(70);
+    return 0;
+}

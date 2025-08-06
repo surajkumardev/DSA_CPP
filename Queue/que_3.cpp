@@ -1,4 +1,4 @@
-//Queue using STL deque NOTE=> deque != (dequeue)remove
+//deque using STL deque NOTE=> deque != (dequeue)remove
 #include <iostream>
 #include <deque>
 using namespace std;
