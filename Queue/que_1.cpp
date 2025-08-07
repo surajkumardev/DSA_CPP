@@ -1,7 +1,7 @@
 //Queue Implementation Using STL
 
 #include <iostream>
-#include <queue>
+#include <queue> //to import the queue in the stl 
 using namespace std;
 
 int main() {

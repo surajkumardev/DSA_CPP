@@ -68,3 +68,29 @@ public:
         cout << endl;
     }
 };
+int main() {
+    Queue q;
+
+    q.enqueue(10);
+    q.enqueue(20);
+    q.enqueue(30);
+
+    cout << "Queue after enqueues: ";
+    q.display();
+
+    cout << "Peek: " << q.peek() << endl;
+
+    q.dequeue();
+    cout << "Queue after one dequeue: ";
+    q.display();
+
+    q.dequeue();
+    q.dequeue();
+
+    cout << "Queue after emptying: ";
+    q.display();
+
+    q.dequeue();  // Underflow case
+
+    return 0;
+}

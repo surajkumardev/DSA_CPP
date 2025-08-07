@@ -74,6 +74,7 @@ int main() {
     return 0;
     //how to compile and run on powershell:
     //g++ a.cpp
-    //.\a.exe
+    //.\a.exe 
+    //or ./a.exe
 
 }

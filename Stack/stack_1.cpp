@@ -42,11 +42,11 @@ public:
 int main(){
     Stack obj;
     obj.push(10); obj.push(20); obj.push(30);
-
-    //popping
+   obj.push(10); obj.push(300); obj.push(30);
+    
     obj.pop(); obj.pop();
 
-    //obj
+    obj.display();
     
 return 0;
 }
