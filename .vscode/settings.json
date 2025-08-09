@@ -50,6 +50,8 @@
         "xlocnum": "cpp",
         "xmemory": "cpp",
         "xtr1common": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "unordered_map": "cpp",
+        "xhash": "cpp"
     }
 }

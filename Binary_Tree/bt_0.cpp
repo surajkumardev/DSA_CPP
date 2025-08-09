@@ -5,51 +5,66 @@
 #include<utility>
 #include<queue>
 
-using namespace std; 
-struct node{
+using namespace std;
+
+struct node {
     int data;
     node* left;
     node* right;
-    node(int val){
-        data=val;
-        left=right=NULL;
+    node(int val) {
+        data = val;
+        left = right = NULL;
     }
 };
-vector<vector<int>> levelOrder(node* root){
-    vector<vector<int>> ans;  //result 
-    if(root==NULL){
-        return; 
+
+vector<vector<int>> levelOrder(node* root) {
+    vector<vector<int>> ans;  // result
+    if (root == NULL) {
+        return ans;  // fix: return empty result
     }
+
     queue<node*> q;
     q.push(root);
-    while(q.empty()){
-    int size=q.size();
-        vector<int> level; 
-        for(int i=0;i<size;i++){
-            node* node=q.front();
+
+    while (!q.empty()) {  // fix: should be !q.empty()
+        int size = q.size();
+        vector<int> level;
+
+        for (int i = 0; i < size; i++) {
+            node* temp = q.front();
             q.pop();
-            if(node->left!=NULL){
-                q.push(node->left);
+            level.push_back(temp->data);  // fix: store node's data
+
+            if (temp->left != NULL) {
+                q.push(temp->left);
             }
-            if(node->right!=NULL){
-                q.push(node->right);
+            if (temp->right != NULL) {
+                q.push(temp->right);
             }
-            ans.push_back(level);
         }
+
+        ans.push_back(level);  // fix: push after level is filled
     }
+
     return ans;
-
-
 }
 
-int main(){
-    node* root=new node(1);
-    root->left=new node(2);
-    root->right=new node(3);
-    root->left->left=new node(4);
-    root->left->right=new node(5);
+int main() {
+    node* root = new node(1);
+    root->left = new node(2);
+    root->right = new node(3);
+    root->left->left = new node(4);
+    root->left->right = new node(5);
 
+    vector<vector<int>> result = levelOrder(root);
 
+    // Print the result
+    for (auto level : result) {
+        for (auto val : level) {
+            cout << val << " ";
+        }
+        cout << endl;
+    }
 
-    return 0; 
+    return 0;
 }
