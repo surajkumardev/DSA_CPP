@@ -11,23 +11,20 @@ using namespace std;
 //Time compelxity-> 
 
 //brute force approach code 
-int MajorityElement(vector<int> vec){
-        vector<int> ans; 
-        int freq=0;
-        int n=vec.size();
-        for(int i=0;i<n;i++){
+int MajorityElement(vector<int> vec) {
+    int n = vec.size();
+    int mid = n / 2;
 
-            for(int j=i+1;j<n;j++){
-                if(ans[i]==ans[j]){
-                    freq++;
-                }
+    for (int i = 0; i < n; i++) {
+        int freq = 1; // count current element itself {why we keep the freq=1 inside the loop not outside the loop}
+        for (int j = i + 1; j < n; j++) {
+            if (vec[i] == vec[j]) {
+                freq++;
             }
         }
-        int mid=n/2;
-        if(freq>mid){
-            return freq;
-}
-
-
-
+        if (freq > mid) {
+            return vec[i];  // return the majority element
+        }
+    }
+    return -1; // no majority element found
 }
