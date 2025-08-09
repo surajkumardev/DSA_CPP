@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std; 
 // jist-> Majority Element  *******************************MOOOORE ALGORITHM********************************
 // brute force->  The element is called the majority element when it appears more than n/2 times
@@ -28,3 +29,48 @@ int MajorityElement(vector<int> vec) {
     }
     return -1; // no majority element found
 }
+
+//Better appraoch use the o(nlog(n)) time complexity where 
+int MajorityElement(vector<int> vec) {
+    int n = vec.size();
+    int mid = n / 2;
+    sort(vec.begin(), vec.end());
+    
+    int freq = 1;
+    for (int i = 1; i < n; i++) {
+        if (vec[i] == vec[i - 1]) {
+            freq++;
+        } else {
+            freq = 1; // reset count for new element
+        }
+        if (freq > mid) {
+            return vec[i];
+        }
+    }
+    return -1; // no majority element found
+}
+//Moore Voting algorithjm 
+
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        //solve it using the moore algorithm 
+        //that say even if the number is not majority in a part in the 
+        //overall state it can be big 
+        int candidate=0;
+        int count=0;
+        for(int num: nums){
+            if(count==0){
+                candidate=num;
+            }
+            if(num==candidate){
+                count++;
+            }else{
+                count--;
+            }
+        }
+    return candidate;
+
+    }
+};
+
