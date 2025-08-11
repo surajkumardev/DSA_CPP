@@ -34,6 +34,23 @@ void inorderTraversal(Node* root){
     inorderTraversal(root->right);
 }
 
+void preorder(Node* root){
+    if(root=NULL) return;  //means this node does not exists 
+    //root left right 
+    cout<<root->data<<endl;
+    preorder(root->left);
+    preorder(root->right);
+}
+
+void postorder(Node* root){
+    if(root==NULL)return ;
+    //left 
+    postorder(root->left);
+    //right
+    postorder(root->right);
+    //value
+    cout<<root->data<<" ";
+}
 void printTree(Node* root, int space = 0, int height = 5) {
     if (root == NULL) return;
 
@@ -75,7 +92,8 @@ int main(){
     inorderTraversal(root);
 
     printTree(root);
-
+    postorder(root);
+    preorder(root);
 
     return 0;
 }
