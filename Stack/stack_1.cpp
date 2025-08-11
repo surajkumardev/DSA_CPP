@@ -1,4 +1,10 @@
 //stack implementation Using Vectors 
+
+
+//💉💉why we fucking need a stack if we already have array  
+// Stack operations (push, pop, top) are O(1) and clearly 
+// stack do the insertion , deletion and top operation in o(1) time complexity but the array do it in o(n) time compelxity 
+// o(1)>>>>o(n)  as the o(1) is far better than the o(n) time compelxity 
 #include <iostream>
 #include <vector>
 using namespace std;

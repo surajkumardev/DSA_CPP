@@ -1,4 +1,4 @@
-//do the inorder preorder and postorer traverrsal in one go 
+//{do the inorder preorder and postorer traverrsal in one go }
 
 // key Idea or logic=> ?
 
