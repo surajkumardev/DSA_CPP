@@ -37,7 +37,7 @@ class Stackk{
     }
     void peek(){
         //first check whether the stack is empty or not 
-        if(top==-1){
+        if(top==-1){ //arr[top] and top are two different things
             cout<<"stack is empty"<<endl;
             return ;
         }
@@ -55,7 +55,6 @@ class Stackk{
     //is size
     void isSize(){
         cout<<"Current size: "<<top+1<<endl;
-        
     }
 
     //delete the stack 

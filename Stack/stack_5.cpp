@@ -26,9 +26,5 @@ int main(){
         ss.pop();
         
     }
-
-
-
-    
     return 0;
 }

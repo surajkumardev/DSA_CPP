@@ -30,14 +30,14 @@ Node* createTree(){
 void inorderTraversal(Node* root){
     if(root==NULL) return ;
     inorderTraversal(root->left);
-    cout<<root->data<<" "<<endl;
+    cout<<root->data<<"Inorder  "<<endl;
     inorderTraversal(root->right);
 }
 
 void preorder(Node* root){
-    if(root=NULL) return;  //means this node does not exists 
+    if(root==NULL) return;  //means this node does not exists 
     //root left right 
-    cout<<root->data<<endl;
+    cout<<root->data<<"preorder: ";
     preorder(root->left);
     preorder(root->right);
 }
@@ -49,25 +49,25 @@ void postorder(Node* root){
     //right
     postorder(root->right);
     //value
-    cout<<root->data<<" ";
+    cout<<root->data<<"Postorder: ";
 }
-void printTree(Node* root, int space = 0, int height = 5) {
-    if (root == NULL) return;
+// void printTree(Node* root, int space = 0, int height = 5) {
+//     if (root == NULL) return;
 
-    // Increase distance between levels
-    space += height;
+//     // Increase distance between levels
+//     space += height;
 
-    // Print right child first
-    printTree(root->right, space);
+//     // Print right child first
+//     printTree(root->right, space);
 
-    // Print current node after spaces
-    cout << endl;
-    for (int i = height; i < space; i++) cout << " ";
-    cout << root->data << "\n";
+//     // Print current node after spaces
+//     cout << endl;
+//     for (int i = height; i < space; i++) cout << " ";
+//     cout << root->data << "\n";
 
-    // Print left child
-    printTree(root->left, space);
-}
+//     // Print left child
+//     printTree(root->left, space);
+// }
 
 
 
@@ -91,7 +91,7 @@ int main(){
     Node* root=createTree();
     inorderTraversal(root);
 
-    printTree(root);
+    // printTree(root);
     postorder(root);
     preorder(root);
 
