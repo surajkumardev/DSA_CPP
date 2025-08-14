@@ -23,6 +23,8 @@ Node* insert(Node* root, int val) {
     }
     return root;
 }
+
+//this is how you find the minimum from the right part to delete the element 
 Node* findMin(Node* root) {
     while (root && root->left != nullptr) {
          root = root->left;
@@ -43,18 +45,33 @@ Node* deleteNode(Node* root, int val){
     else if(val>root->data){
         root->right=deleteNode(root->right,val);
     }else{
-        //cases -> no child 
-
-
-        //ONe child
-
+        //No child case 
+        if(root->left==nullptr && root->right==nullptr){
+            delete root;
+            return nullptr; 
+        }
+        //one child
+        else if(root->left==nullptr ){
+            Node* temp=root->right;
+            delete root;
+            return temp; 
+        }
+        else if(root->right=nullptr){
+            Node* temp=root->left;
+            delete root;
+            return temp;
+        }
+        //two child 
+        else{
+            Node* temp=findMin(root->right);
+            root->data=temp->data; 
+            root->right=deleteNode(root->right,temp->data);
+        }
 
         //two child 
 
-        
+        return root;
     }
-
-
 
 }
 
@@ -97,6 +114,8 @@ int main() {
 
 
     deleteNode(root, dele);
+    //now call the indord er
+    inorder(root);
 
 
 
