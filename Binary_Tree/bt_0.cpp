@@ -18,9 +18,9 @@ struct node {
 };
 
 vector<vector<int>> levelOrder(node* root) {
-    vector<vector<int>> ans;  // result
+    vector<vector<int>> ans;  
     if (root == NULL) {
-        return ans;  // fix: return empty result
+        return ans;  
     }
 
     queue<node*> q;
