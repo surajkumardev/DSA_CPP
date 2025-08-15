@@ -26,6 +26,11 @@ vector<vector<int>> levelOrder(node* root) {
     queue<node*> q;
     q.push(root);
 
+
+
+
+    //git add it used her e
+
     while (!q.empty()) {  // fix: should be !q.empty()
         int size = q.size();
         vector<int> level;
