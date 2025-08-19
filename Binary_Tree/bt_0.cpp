@@ -17,33 +17,15 @@ struct node {
     }
 };
 
+
+//Level Order Travesal of the code 
 vector<vector<int>> levelOrder(node* root) {
     vector<vector<int>> ans;  
     if (root == NULL) {
         return ans;  
     }
-
     queue<node*> q;
     q.push(root);
-//sdfdsfds
-//sdfhdsljf
-
-
-// lkjfljsdklfdsljfkldsjfkldsjfk;ljds
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //git add it used her e
 
     while (!q.empty()) {  // fix: should be !q.empty()
         int size = q.size();
