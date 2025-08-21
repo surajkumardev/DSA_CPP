@@ -52,6 +52,7 @@
         "xtr1common": "cpp",
         "xtree": "cpp",
         "unordered_map": "cpp",
-        "xhash": "cpp"
+        "xhash": "cpp",
+        "random": "cpp"
     }
 }
