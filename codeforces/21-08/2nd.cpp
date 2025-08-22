@@ -28,6 +28,9 @@ int main(){
                 int price = (level == 0 ? 3 : 3 * power + level * (power / 3));
 
                 cost += digit * price;
+
+
+                //not able to make the logic
             }
             level++;
         }
