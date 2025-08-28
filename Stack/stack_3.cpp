@@ -18,6 +18,7 @@ class Stackk{
         top=-1;
         arr=new int[s]; //create  a dynamic array using the new keyword 
     }
+
     void push(int value){
         //overflow condition 
         if(top==size-1){
@@ -25,8 +26,10 @@ class Stackk{
             return; //need to return here 
         }
         top++;
+        // sdfdsfdsfdsfdsf
         arr[top]=value;
     }
+
     void pop(){
         if(top==-1){
             cout<<"Underflow condition cannot pop from the Stack"<<endl;
@@ -61,8 +64,8 @@ class Stackk{
     ~Stackk(){
         delete[] arr; 
     }
-
 };
+
 
 int main(){
     Stackk obj(2);
