@@ -30,6 +30,24 @@ class Stackk{
         arr[top]=value;
     }
 
+
+
+
+
+
+
+// sdfsdfdsfdsfdsfds
+// s
+// df
+// S_IFDIR
+// _DN_SAVE_OPERANDS_FLUSH_RESULTSds
+// f
+// ds
+// f
+
+
+
+
     void pop(){
         if(top==-1){
             cout<<"Underflow condition cannot pop from the Stack"<<endl;
