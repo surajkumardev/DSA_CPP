@@ -6,6 +6,9 @@
 // 4. Size
 // 5. empty
 
+
+// sfsfsdf
+
 #include<iostream>
 using namespace std;
 class Stackk{
