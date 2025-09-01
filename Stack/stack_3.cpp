@@ -11,6 +11,9 @@
 
 #include<iostream>
 using namespace std;
+
+
+// adasdsdwedwe
 class Stackk{
     public: 
     int* arr; //dynamic array 
