@@ -25,6 +25,14 @@ using namespace std;
 // f
 // fds
 
+
+
+
+
+
+
+
+// ...kjshdfkhdskjfhkjsdhfjs
 class Stackk{
     public: 
     int* arr; //dynamic array 
