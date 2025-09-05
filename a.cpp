@@ -2,14 +2,25 @@
 #include<string> 
 using namespace std;
 int main(){
-    // creating array 
-    int arr=[1,234,324];
-    int arrg[]; 
-    int asrr[]={234,234,23,4,324};
+    char name[]={'s','b','c','\0'};
+    cout<<name<<endl;
+
+    string st; 
+    cin>>st; 
+    cout<<endl; 
+    cout<<st;
     
-    //crearing 2d array 
-    ///createing vector 
-    //creating 2d vector 
+
+    // string str; 
+    char str[10];
+    cin.getline(str, 10); 
+
+
+        
+
+
+
+
 
 
     return 0;
