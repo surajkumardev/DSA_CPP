@@ -24,8 +24,8 @@ int main(){
     aa.push_back('!');
     cout<<aa<<" ";
 
-    string help="fucker";
-    help.pop_back(); //remove the last characther fucke
+    string help="indis";
+    help.pop_back(); //remove the last characther 
     cout<<help<< " "; //fucke
     help.erase(0,2);
     cout<<help<< " ";

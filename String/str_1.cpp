@@ -35,6 +35,7 @@ int main(){
     for(int i=0;i<'\0';i++){ //wrong w❌❌
         cout<<s[i]<<" ";
     }
+    
     //correct approach
     for(int i=0;s[i]!='\0';i++){
         cout<<s[i]<<" ";
