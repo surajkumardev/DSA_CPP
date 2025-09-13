@@ -1,6 +1,6 @@
 //insertion
 //deletion
 //sorting
-//findelement 
+//find element 
 //fast and slow pointer 
 

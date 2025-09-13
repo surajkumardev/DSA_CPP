@@ -1,4 +1,4 @@
-//Stack Implementation using Link List
+// Stack Implementation using Linked List//Stack Implementation using Link List
 
 #include <iostream>
 using namespace std;

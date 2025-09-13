@@ -1,5 +1,9 @@
 #include<iostream> 
 using namespace std; 
+
+jist-> {
+    
+}
 void printNTimes(int n){    
     if(n==0){
         return; 
