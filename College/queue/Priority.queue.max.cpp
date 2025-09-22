@@ -1,6 +1,10 @@
 #include <iostream>
 #include<queue>
 using namespace std;
+// In C++ (STL)
+// By default, priority_queue in C++ is implemented as a max heap.
+// The largest element is always at the top.
+// If you want a min heap, you must explicitly specify a comparator:
 
 class PriorityQueue {
     vector<int> heap; // underlying array (1-indexed idea, but store at 0)
@@ -101,3 +105,42 @@ int main() {
 
     return 0;
 }
+
+class Solution {
+  public:
+  void find(Node* root, int pos, int &l, int &r){
+      if(!root){
+          return;
+      }
+      l=min(pos,l);
+      r=max(pos, r);
+      find(root->left, pos-1,l,r);
+      find(root->right,pos+1, l, r);
+}
+    void Tview(Node* root, int pos, vector<int> &ans, vector<int> &level,int l){
+        if(!root){
+            return;
+        }
+        if(level[pos]>l){
+            ans[pos]=root->data;
+            level[pos]=l;
+        }
+        //now 
+        Tview(root->left, pos-1, ans, level, l+1);
+        Tview(root->right, pos+1, ans,level,l+1);
+    }
+  
+  
+  
+    // Function to return a list of nodes visible from the top view
+    // from left to right in Binary Tree.
+    vector<int> topView(Node *root) {
+        // code here
+        int l=0, r=0; 
+        find(root, 0, l, r);
+        vector<int> ans(r-l+1);
+        vector<int> level (r-l+1, INT_MAX);
+        Tview(root,-1*l, ans, level , 0);
+        return ans; 
+    }
+};

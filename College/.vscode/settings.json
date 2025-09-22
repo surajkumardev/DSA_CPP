@@ -8,6 +8,9 @@
         "stack": "cpp",
         "type_traits": "cpp",
         "xutility": "cpp",
-        "xlocale": "cpp"
+        "xlocale": "cpp",
+        "ostream": "cpp",
+        "cmath": "cpp",
+        "set": "cpp"
     }
 }
