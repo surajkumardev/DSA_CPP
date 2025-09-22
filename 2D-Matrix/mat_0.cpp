@@ -12,6 +12,7 @@ int main(){
         for(int j=0;j<cols;j++){
             cin>>matrix[i][j];
     }
+    
     }
     //outupt
         for(int i=0;i<rows;i++){
